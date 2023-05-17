@@ -8,5 +8,3 @@ load_dotenv(find_dotenv())
 @dataclass(frozen=True)
 class APIkeys:
     TOKEN: str = os.getenv('TOKEN')
-
-print(APIkeys.TOKEN)

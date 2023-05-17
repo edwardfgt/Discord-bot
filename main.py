@@ -1,5 +1,5 @@
-from config.config_files import APIkeys
+import bot
 
 if __name__ == '__main__':
-    print(APIkeys.TOKEN)
+    bot.run_discord_bot()
 

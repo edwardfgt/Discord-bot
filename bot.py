@@ -1,8 +1,10 @@
 import os
 import discord
+from discord import Intents
 import responses
 from config.config_files import APIkeys
 
+intents = Intents.default()
 
 async def send_message(message, user_message):
     try:
@@ -12,7 +14,7 @@ async def send_message(message, user_message):
         print(e)
 
 def run_discord_bot():
-    client = discord.CLIENT()
+    client = discord.Client(intents=intents)
 
     @client.event
     async def on_ready():
